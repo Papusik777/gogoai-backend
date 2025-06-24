@@ -1,8 +1,7 @@
 {
   "name": "gogoai-backend",
   "version": "1.0.0",
-  "description": "GoGoAI Production Backend",
-  "type": "module",
+  "description": "GoGoAI Backend Clean Production",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,7 +9,6 @@
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "openai": "^4.48.1"
+    "openai": "^4.49.0"
   }
 }
