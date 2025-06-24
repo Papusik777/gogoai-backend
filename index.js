@@ -1,15 +1,19 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { OpenAI } from "openai";
+
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const { OpenAI } = require("openai");
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-// Моковые новости (будут заменяться на реальные при подключении источников)
+// Моковые новости
 const news = [
   { id: 1, title: "Bitcoin hits $85,000 ATH!", description: "Massive institutional inflows push Bitcoin to new highs.", aiStatus: "✅ Verified" },
   { id: 2, title: "Ethereum 2.0 fully deployed!", description: "Scalability upgrade successfully launched.", aiStatus: "✅ Verified" },
@@ -25,7 +29,7 @@ const analytics = {
   sp500: "5,310"
 };
 
-// API роуты:
+// Роуты API
 app.get("/api/news", (req, res) => {
   res.json(news);
 });
