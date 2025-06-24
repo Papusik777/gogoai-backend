@@ -9,6 +9,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+// Моковые данные
 const news = [
   { id: 1, title: "Bitcoin hits $85,000 ATH!", description: "Massive institutional inflows push Bitcoin to new highs.", aiStatus: "✅ Verified" },
   { id: 2, title: "Ethereum 2.0 fully deployed!", description: "Scalability upgrade successfully launched.", aiStatus: "✅ Verified" },
@@ -23,6 +24,7 @@ const analytics = {
   sp500: "5,310"
 };
 
+// API-роуты
 app.get("/api/news", (req, res) => {
   res.json(news);
 });
@@ -53,4 +55,4 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));ORT}`));
